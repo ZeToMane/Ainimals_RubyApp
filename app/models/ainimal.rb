@@ -1,0 +1,2 @@
+class Ainimal < ApplicationRecord
+end

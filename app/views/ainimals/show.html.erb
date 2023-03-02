@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ainimal %>
+
+<div>
+  <%= link_to "Edit this ainimal", edit_ainimal_path(@ainimal) %> |
+  <%= link_to "Back to ainimals", ainimals_path %>
+
+  <%= button_to "Destroy this ainimal", @ainimal, method: :delete %>
+</div>
