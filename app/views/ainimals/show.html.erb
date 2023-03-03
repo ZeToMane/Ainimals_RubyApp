@@ -2,9 +2,9 @@
 
 <%= render @ainimal %>
 
-<div>
-  <%= link_to "Edit this ainimal", edit_ainimal_path(@ainimal) %> |
-  <%= link_to "Back to ainimals", ainimals_path %>
+<div class="container col-5 mt-3 text-center">
+  <%= link_to "Edit this ainimal", edit_ainimal_path(@ainimal), class:'btn btn-light' %> |
+  <%= link_to "Back to ainimals", ainimals_path, class:'btn btn-light' %>
 
-  <%= button_to "Destroy this ainimal", @ainimal, method: :delete %>
+  <%= button_to "Destroy this ainimal", @ainimal, method: :delete, class:'btn btn-danger' %>
 </div>
