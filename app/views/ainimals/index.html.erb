@@ -1,14 +1,31 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Ainimals</h1>
-
-<div id="ainimals">
-  <% @ainimals.each do |ainimal| %>
-    <%= render ainimal %>
-    <p>
-      <%= link_to "Show this ainimal", ainimal %>
-    </p>
-  <% end %>
+<div class="container-fluid row" style="position: absolute; z-index: 3; padding-top: 300px">
+  <div class="col-1"></div>
+  <div class="col-7" >
+    <h1 style="font-family: 'Montserrat', sans-serif; font-weight:600; font-size: 36px; letter-spacing: 0.09em; color: white;">Bienvenue chez Ainimals !</h1>
+    <h4 style="font-family: 'Montserrat', sans-serif; font-weight:300; font-size: 24px; color: white;">Ce site est un catalogue fictif d'animaux qui n'existent pas. Nous utilisons des AI pour donner vie à notre imagination et vous transporter dans un monde parallele où ces bêtes habitent</h4>
+  </div>
+  <div class="col-4"></div>
+</div>
+<div class="container-fluid" style="width: 100%; height: 500px; overflow: hidden; position: absolute; z-index: 1;">
+  <%= image_tag 'Desktop-min.png', class: 'container-fluid', style: 'max-width: 100%; height: 650px; position: absolute; z-index: 1'%>
+</div>
+<div class="container-fluid" style="width: 100%; height: 500px; overflow: hidden; position: relative; z-index: 2;  background: linear-gradient(180deg, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0.4232) 0.01%, rgba(0, 0, 0, 0.506) 38.15%, rgba(0, 0, 0, 0.92) 100%);">
+  <%# <%= image_tag 'Desktop-min.png', class: 'container-fluid', style: 'max-width: 100%; height: 650px; position: absolute; z-index: 1'%> 
 </div>
 
-<%= link_to "New ainimal", new_ainimal_path %>
+
+<div class="container flux">
+
+  <%= link_to "New ainimal", new_ainimal_path, class: 'btn btn-dark container text-center' %>
+
+  <div class="container">
+    <% @ainimals.each do |ainimal| %>
+    <div style="margin-bottom: 50px; margin-top: 50px;">
+      <%= render ainimal %>
+    </div>
+    <% end %>
+  </div>
+
+</div>

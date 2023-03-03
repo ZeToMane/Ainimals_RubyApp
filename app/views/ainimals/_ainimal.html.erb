@@ -1,22 +1,30 @@
-<div id="<%= dom_id ainimal %>">
-  <p>
-    <strong>Name:</strong>
-    <%= ainimal.name %>
-  </p>
+<div class="card container-fluid" style="--bs-card-border-color: black; --bs-card-border-width: 0px;" id="<%= dom_id ainimal %>">
+  <div class="row p-4 justify-content-center">
+    <div class="col-3">
+      <img style="max-width: 100%; max-height: 100%;" src="<%= ainimal.image %>">
+    </div>
 
-  <p>
-    <strong>Class:</strong>
-    <%= ainimal.class %>
-  </p>
+    <div class="col-3">
+      <div class="row align-items-end">
+        <div class="col-9">
+          <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 32px;">
+            <%= ainimal.name %>
+          </p>
+        </div>
+        <div class="col">
+          <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 20px;">
+            <%= ainimal.animaltype %>
+          </p>
+        </div>
+      </div>
 
-  <p>
-    <strong>Image:</strong>
-    <%= ainimal.image %>
-  </p>
+      <p style="font-family: 'Montserrat', sans-serif; font-weight:400; font-size: 14px;">
+        <%= ainimal.desc %>
+      </p>
 
-  <p>
-    <strong>Desc:</strong>
-    <%= ainimal.desc %>
-  </p>
-
+      <p>
+        <%= link_to "Show this ainimal", ainimal %>
+      </p>
+    </div>
+  </div>
 </div>
